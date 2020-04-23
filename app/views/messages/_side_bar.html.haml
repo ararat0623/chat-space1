@@ -1,1 +1,31 @@
-＜チャット画面＞
+.side-bar
+ .side-bar__user-name
+  .top-items
+   %p.top-items__name
+    arai
+
+   %ul.top-items__icons<
+   
+    %li.top-items__icons--icon.top<
+     = link_to "#", class: "top-items__icons--group" do
+      %i.far.fa-edit.top-items__icons--image
+ 
+    %li.top-items__icons--icon<
+     = link_to "#",class:"top-items__icons--setting" do
+      %i.fas.fa-cog.top-items__icons--image
+
+
+ .side-bar__group-list
+  .group
+   %p.group__name
+    techcamp
+   %p.group__message
+    message
+    
+   %p.group__name
+    techcamp
+   %p.group__message
+    message
+
+   
+  
