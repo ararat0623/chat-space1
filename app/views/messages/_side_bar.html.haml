@@ -2,7 +2,7 @@
  .side-bar__user-name
   .top-items
    %p.top-items__name
-    arai
+    = current_user.name
 
    %ul.top-items__icons<
    
@@ -11,7 +11,7 @@
       %i.far.fa-edit.top-items__icons--image
  
     %li.top-items__icons--icon<
-     = link_to "#",class:"top-items__icons--setting" do
+     = link_to :edit_user_registration,class:"top-items__icons--setting" do
       %i.fas.fa-cog.top-items__icons--image
 
 
