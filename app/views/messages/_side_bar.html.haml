@@ -7,7 +7,7 @@
    %ul.top-items__icons<
    
     %li.top-items__icons--icon.top<
-     = link_to "#", class: "top-items__icons--group" do
+     = link_to :new_group, class: "top-items__icons--group" do
       %i.far.fa-edit.top-items__icons--image
  
     %li.top-items__icons--icon<
@@ -16,16 +16,14 @@
 
 
  .side-bar__group-list
-  .group
-   %p.group__name
-    techcamp
-   %p.group__message
-    message
-    
-   %p.group__name
-    techcamp
-   %p.group__message
-    message
+  - groups.each do |group|
+   .group
+    = link_to "/groups/#{group.id}/edit" do
+     %p.group__name
+      = group.name
+     %p.group__message
+      message
+
 
    
   
