@@ -5,11 +5,15 @@
 @import "font-awesome";
 @import "modules/user";
 @import "modules/flash";
+@import "modules/group";
 
 .wrapper{
   display: flex;
   height: 100vh;
   width: 100vw;
+}
+a{
+  text-decoration: none;
 }
  .side-bar{
  background-color: #253141;
@@ -26,6 +30,7 @@
  &__group-list{
   height:calc(100vh - 100px);
   background-color: #2f3e51;
+  padding-top: 20px;
  }
 }
 .top-items{
@@ -53,15 +58,16 @@
  }
 }
 .group{
-  padding:20px 20px 40px ;
-  color:#ffffff;
+  padding:0px 20px 0px ;
   &__name{
   font-size: 15px;
   margin-bottom: 5px;
+  color:#ffffff;
   }
   &__message{
   font-size: 11px;
   margin-bottom: 40px;
+  color:#ffffff;
   }
 }
 
@@ -180,6 +186,7 @@
    color:#ffffff;
   }
 }
+
 
 
 
