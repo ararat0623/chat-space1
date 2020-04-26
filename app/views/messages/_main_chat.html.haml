@@ -2,48 +2,29 @@
  .main-chat__group-info
   .grop-info-left
    %p.grop-info-left__name
-    test
+    = @group.name
    %p.grop-info-left__member
-    Member:Arai
+    Member:
+    - @group.users.each do |user|
+     = user.name
   .grop-info-right
-   = link_to "#", class:"grop-info-right__edit-link" do
+   = link_to "/groups/#{@group.id}/edit", class:"grop-info-right__edit-link" do
     %p.grop-info-right__edit-btn
      Edit
     
+
  .main-chat__message-list
-  .message
-   .message__top
-    %p.message__top--name
-     Arai
-    %p.message__top--date-time
-     2020/04/20(Mon) 23:37
-   %p.message__content
-    おはよう！
+  = render @message
 
-   .message__top
-    %p.message__top--name
-     Arai
-    %p.message__top--date-time
-     2020/04/20(Mon) 23:37
-   %p.message__content
-    おはよう！
-
-   .message__top
-    %p.message__top--name
-     Arai
-    %p.message__top--date-time
-     2020/04/20(Mon) 23:37
-   %p.message__content
-    おはよう！
 
  .main-chat__message-form
-  %form.message-items
+  = form_for [@group,@message] ,class:"message-items" do |f|
    .message-items__content
-    %input.message-items__content--text{:placeholder => "type a message",:type => "text"}/
-    %label{class: "message-items__content--image"}
+    = f.text_field :content,placeholder: "type a message",class: "message-items__content--text"
+    = f.label :image,class: "message-items__content--image" do
      %i.fa.fa-image.message-items__content--image-icon
-     %input.message-items__content--image-file-btn{:type => "file"}/
+     = f.file_field :image,class:"message-items__content--image-file-btn"
      
-   %input.message-items__send-btn{:value => "Send",:type => "submit"}/
+   =f.submit "Send",class:"message-items__send-btn"
     
    
