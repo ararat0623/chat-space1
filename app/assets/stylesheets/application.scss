@@ -87,6 +87,7 @@ a{
   &__message-list{
    height: calc(100vh - 100px - 90px);
    background-color: #eeeeee;
+   padding-top: 35px;
   }
   &__message-form{
     height: 90px;
@@ -123,7 +124,7 @@ a{
 }
 
 .message{
-  padding:35px 40px ;
+  padding:0px 40px ;
   &__top{
    display:flex;
    margin-bottom: 12px;
@@ -142,13 +143,20 @@ a{
    color: #434a54;
    font-size: 14px;
    margin-bottom: 46px;
+   &--image{
+     width:200px;
+     height:auto;
+   }
   }
 }
-.message-items{
+.new_message{
   display: flex;
   justify-content:space-between;
   height: 50px;
   width: 100%;
+}
+.message-items{
+
   &__content{
    height:50px;
    width:100%;

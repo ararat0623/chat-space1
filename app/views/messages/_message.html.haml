@@ -1,0 +1,13 @@
+- @messages.each do |m|
+  .message
+    .message__top
+      %p.message__top--name
+        = m.user.name
+      %p.message__top--date-time
+        = m.created_at
+
+    %p.message__content
+      = m.content
+      %br
+      = image_tag m.image, class: "message__content--image"
+  
