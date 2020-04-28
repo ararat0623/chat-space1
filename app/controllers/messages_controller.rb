@@ -22,7 +22,7 @@ private
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end 
   def group_setting
-    @groups = Group.all.includes(:user)
+    
     @group = Group.find(params[:group_id])
   end
 

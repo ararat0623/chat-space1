@@ -8,8 +8,8 @@ class GroupsController < ApplicationController
     @group.users << current_user
   end
   def create
-    @group = Group.new
-    if @group.save(group_params)
+    @group = Group.new(group_params)
+    if @group.save
       redirect_to "/groups/#{@group.id}/messages", notice: 'グループを作成しました'
     else
       render :new
@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
   end
   def update
     @group = Group.find(params[:id])
-    if @group.save(group_params)
+    if @group.update(group_params)
       redirect_to "/groups/#{@group.id}/messages", notice: 'グループを更新しました'
     else
       render :edit

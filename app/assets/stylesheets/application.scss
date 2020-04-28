@@ -31,6 +31,7 @@ a{
   height:calc(100vh - 100px);
   background-color: #2f3e51;
   padding-top: 20px;
+  overflow: scroll;
  }
 }
 .top-items{
@@ -76,25 +77,34 @@ a{
   background-color: #ffffff;
   height: 100vh;
   width:calc(100vw - 300px);
+  position: relative;
   &__group-info{
    height: 100px;
+   width:calc(100vw - 300px);
    background-color: #fafafa;
    display: flex;
    justify-content:space-between;
    padding-left: 40px;
    padding-right: 40px;
+   top:0px;
+   position: absolute;
   }
   &__message-list{
    height: calc(100vh - 100px - 90px);
+   margin-top:100px;
    background-color: #eeeeee;
    padding-top: 35px;
+   overflow: scroll;
   }
   &__message-form{
     height: 90px;
+    width:calc(100vw - 300px);
     background-color: #d2d2d2;
     padding:40px;
     display: flex;
     align-items:center;
+    bottom: 0px;
+    position: absolute;
   }
 
 }
