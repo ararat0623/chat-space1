@@ -60,8 +60,10 @@ gem 'devise'
 gem 'rails-i18n', '~> 5.1'
 gem 'pry-rails'
 gem 'carrierwave'
+gem 'fog-aws'
 gem 'mini_magick'
 gem 'jquery-rails'
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
