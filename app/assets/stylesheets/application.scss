@@ -74,7 +74,6 @@ a{
 
 
 .main-chat{
-  background-color: #ffffff;
   height: 100vh;
   width:calc(100vw - 300px);
   
@@ -86,11 +85,11 @@ a{
    justify-content:space-between;
    padding-left: 40px;
    padding-right: 40px;
-   
+   border-bottom: solid 1px #eee;
   }
   &__message-list{
    height: calc(100vh - 100px - 90px);
-   background-color: #eeeeee;
+   background-color: #fafafa;
    padding-top: 35px;
    overflow:auto;
   }
@@ -123,9 +122,12 @@ a{
   }
   &__edit-btn{
    font-size: 16px;
-   line-height: 40px;
+   height: 40px;
+   border: solid 1px #38aef0;
    color: #38aef3;
-   padding:28px 20px 38px;
+   text-align: center;
+   line-height: 40px;
+   margin-top: 30px;
   }
 }
 
